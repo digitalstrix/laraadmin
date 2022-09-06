@@ -1,4 +1,5 @@
-
+@extends('auth-layout.main')
+@section('auth-layout-section')
 	<div class="register-page-wrap d-flex align-items-center flex-wrap justify-content-center">
 		<div class="container">
 			<div class="row align-items-center">
@@ -207,4 +208,4 @@
 			</div>
 		</div>
 	</div>
-	
+	@endsection

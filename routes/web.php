@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\adminpanel\DashboardController;
+use App\Http\Controllers\Auth\AuthenticationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,12 @@ use App\Http\Controllers\adminpanel\DashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Auth View Controller
+Route::get('/', [AuthenticationController::class, 'index']);
+Route::get('/login', [AuthenticationController::class, 'index']);
+Route::get('/register', [AuthenticationController::class, 'register']);
+Route::get('/reset', [AuthenticationController::class, 'reset']);
+
+
+
 Route::get('/dashboard', [DashboardController::class, 'index']);
